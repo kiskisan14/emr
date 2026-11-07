@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Resident Account | EMRS</title>
+    <link rel="stylesheet" href="../../shared/css/global.css">
+    <link rel="stylesheet" href="register.css">
+</head>
+<body class="registration-page">
+
+    <!-- ==================== REGISTRATION HEADER ==================== -->
+    <header class="registration-header">
+        <a href="../../Landing/index.html" class="auth-brand">
+            <span class="brand-icon">+</span>
+            <span class="brand-text">
+                <strong>Minglanilla Emergency System</strong>
+                <small>Minglanilla, Cebu • 24/7 Rescue</small>
+            </span>
+        </a>
+        <span class="lgu-label">LGU</span>
+        <div class="registration-heading">
+            <h1>Create your resident account</h1>
+            <div class="progress-label">
+                <span>Step 1 of 2 — Account details</span>
+                <span>50%</span>
+            </div>
+            <div class="progress-track">
+                <span class="progress-half"></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== REGISTRATION FORM ==================== -->
+    <main class="registration-main">
+        <form id="registerForm" class="registration-card" novalidate>
+            <div class="form-section">
+                <label for="firstName">Full Name <span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" placeholder="First name" autocomplete="given-name" required>
+                <div class="name-row">
+                    <input type="text" id="middleName" name="middleName" placeholder="Middle name (optional)" autocomplete="additional-name">
+                    <input type="text" id="surname" name="surname" placeholder="Surname" autocomplete="family-name" required>
+                </div>
+                <small>Use your name as shown on your valid ID.</small>
+            </div>
+
+            <div class="form-section">
+                <label for="mobile">Mobile Phone Number <span class="required">*</span></label>
+                <div class="phone-field">
+                    <span class="country-code">+63</span>
+                    <input type="tel" id="mobile" name="mobile" placeholder="9XX XXX XXXX" inputmode="numeric" maxlength="10" autocomplete="tel-national" required>
+                    <span class="phone-icon">▯</span>
+                </div>
+                <div class="info-banner">
+                    <span class="info-symbol">✓</span>
+                    <span>Mobile number format prepared for future OTP verification.</span>
+                </div>
+                <small>No OTP will be sent during this frontend demonstration.</small>
+            </div>
+
+            <div class="form-section">
+                <label for="ward">Complete Address <span class="required">*</span></label>
+                <select id="ward" name="ward" required>
+                    <option value="">Select your barangay / ward</option>
+                    <option value="Poblacion Ward I">Poblacion Ward I</option>
+                    <option value="Poblacion Ward II">Poblacion Ward II</option>
+                    <option value="Tulay">Tulay</option>
+                    <option value="Calajo-an">Calajo-an</option>
+                    <option value="Pakigne">Pakigne</option>
+                    <option value="Other">Other / not listed</option>
+                </select>
+                <input type="text" id="address" name="address" placeholder="House no., street, sitio / purok" autocomplete="street-address" required>
+                <div class="ward-options">
+                    <button type="button" data-ward="Poblacion Ward I">Ward I</button>
+                    <button type="button" data-ward="Poblacion Ward II">Ward II</button>
+                    <button type="button" data-ward="Tulay">Tulay</button>
+                    <button type="button" data-ward="Calajo-an">Calajo-an</button>
+                    <button type="button" data-ward="Pakigne">Pakigne</button>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label>Security MPIN <span class="required">*</span></label>
+                <p class="field-description">Create a four-digit code for quick login during emergencies.</p>
+                <div class="mpin-inputs">
+                    <input type="password" class="mpin-digit" inputmode="numeric" maxlength="1" aria-label="MPIN digit 1" required>
+                    <input type="password" class="mpin-digit" inputmode="numeric" maxlength="1" aria-label="MPIN digit 2" required>
+                    <input type="password" class="mpin-digit" inputmode="numeric" maxlength="1" aria-label="MPIN digit 3" required>
+                    <input type="password" class="mpin-digit" inputmode="numeric" maxlength="1" aria-label="MPIN digit 4" required>
+                </div>
+                <div class="mpin-note">
+                    <span>Never share your MPIN</span>
+                    <strong>◉ Keep private</strong>
+                </div>
+                <small>Choose a code that is not easy to guess. Avoid using your birth year.</small>
+                <p id="registerMessage" class="form-message" role="status" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" class="primary-button">Proceed to Identity Verification</button>
+            <p class="privacy-note">♢ Protected under the Data Privacy Act of 2012</p>
+        </form>
+
+        <div class="registration-footer">
+            <p>Already registered? <a href="../Login/login.html">Log in with MPIN</a></p>
+            <p class="footer-tools"><span>☎ MDRRMO Hotline</span><span>•</span><span>Bisaya / English</span></p>
+            <p class="prototype-note">Academic prototype only. Do not enter real personal information.</p>
+        </div>
+    </main>
+
+    <script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+/* ==================== LOGIN PAGE ==================== */
+body.login-page {
+    background: #edf1f9;
+    color: #172d45;
+}
+
+.auth-header {
+    position: relative;
+    overflow: hidden;
+    padding: 34px 5% 42px;
+    background: #1553b7;
+    color: #fff;
+}
+
+.auth-header:before,
+.auth-header:after {
+    position: absolute;
+    content: "";
+    border: 22px solid #ffffff14;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.auth-header:before {
+    width: 250px;
+    height: 250px;
+    top: -125px;
+    right: -30px;
+}
+
+.auth-header:after {
+    width: 130px;
+    height: 130px;
+    top: 35px;
+    right: 8%;
+}
+
+.auth-brand {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+    max-width: 80%;
+}
+
+.brand-icon {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #1553b7;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.brand-text strong {
+    max-width: 330px;
+    font-size: 21px;
+    line-height: 1.35;
+}
+
+.brand-text small {
+    color: #d9e6ff;
+    font-size: 14px;
+}
+
+.lgu-label {
+    position: absolute;
+    z-index: 1;
+    top: 45px;
+    right: 8%;
+    padding: 5px 13px;
+    border-radius: 22px;
+    background: #ffffff2b;
+    font-size: 13px;
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    margin-top: 35px;
+}
+
+.header-content h1 {
+    font-size: clamp(27px, 4vw, 39px);
+    line-height: 1.25;
+}
+
+.header-content p {
+    margin-top: 8px;
+    color: #d9e6ff;
+    font-size: 14px;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 92%;
+    max-width: 650px;
+    margin: 26px auto 40px;
+}
+
+.login-card,
+.keypad-card {
+    padding: 25px;
+    border: 1px solid #d7e0ec;
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 3px 12px #18314f08;
+}
+
+.registered-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    color: #718096;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .7px;
+}
+
+.text-button,
+.link-button {
+    padding: 5px;
+    border: 0;
+    background: transparent;
+    color: #1553b7;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.resident-summary {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 13px;
+    padding: 15px;
+    border: 1px solid #d9e1ee;
+    border-radius: 18px;
+    background: #f0f3fa;
+}
+
+.resident-avatar {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #dce8ff;
+    color: #1553b7;
+    font-weight: bold;
+}
+
+.resident-details {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.resident-details strong {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+.resident-details span {
+    color: #718096;
+    font-size: 13px;
+}
+
+.verified-mark {
+    color: #139b69;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.pin-title {
+    margin-top: 28px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.pin-display {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0 10px;
+}
+
+.pin-slot {
+    width: 25%;
+    max-width: 90px;
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #d8e1ed;
+    border-radius: 17px;
+}
+
+.pin-slot.filled {
+    border-color: #1553b7;
+}
+
+.pin-slot:after {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #e1e8f3;
+    content: "";
+}
+
+.pin-slot.filled:after {
+    width: 15px;
+    height: 15px;
+    background: #1553b7;
+}
+
+.form-message {
+    min-height: 18px;
+    margin: 8px 0;
+    font-size: 13px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.form-message.error {
+    color: #bf3039;
+}
+
+.form-message.success {
+    color: #137b55;
+}
+
+.primary-button,
+.secondary-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 17px;
+    border-radius: 14px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button {
+    width: 100%;
+    border: 1px solid #1553b7;
+    background: #1553b7;
+    color: #fff;
+    font-size: 17px;
+}
+
+.primary-button:hover {
+    background: #10469c;
+}
+
+.link-button {
+    display: block;
+    margin: 12px auto 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 20px 0;
+    color: #7b8798;
+}
+
+.or-divider span {
+    flex: 1;
+    height: 1px;
+    background: #dce3ed;
+}
+
+.or-divider p {
+    font-size: 13px;
+}
+
+.alternate-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.secondary-button {
+    flex: 1;
+    gap: 8px;
+    border: 1px solid #d8e1ed;
+    background: #fff;
+    color: #172d45;
+}
+
+.secondary-button:hover {
+    background: #f3f6fb;
+}
+
+.prototype-note {
+    margin-top: 17px;
+    color: #758399;
+    font-size: 11px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.keypad-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.keypad-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 14px;
+}
+
+.keypad-key {
+    width: 76px;
+    height: 76px;
+    border: 1px solid #d8e1ed;
+    border-radius: 50%;
+    background: #eef2fa;
+    color: #172d45;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.keypad-key:hover,
+.keypad-key:focus-visible {
+    border-color: #1553b7;
+    background: #dce8ff;
+    outline: none;
+}
+
+.keypad-key:active {
+    background: #1553b7;
+    color: #fff;
+}
+
+.keypad-bottom {
+    align-items: center;
+}
+
+.keypad-spacer {
+    width: 76px;
+    height: 76px;
+}
+
+.delete-key {
+    background: #fff;
+    color: #718096;
+    font-size: 29px;
+}
+
+.emergency-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 20px;
+    border: 1px solid #efbaba;
+    border-radius: 24px;
+    background: #fff0f0;
+    color: #c63238;
+}
+
+.emergency-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #d92f38;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.emergency-text {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.emergency-text strong {
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.emergency-text small {
+    color: #795e66;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.emergency-arrow {
+    font-size: 28px;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | EMRS</title>
+    <link rel="stylesheet" href="../../shared/css/global.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="login-page">
+
+    <!-- ==================== LOGIN HEADER ==================== -->
+    <header class="auth-header">
+        <a href="../../Landing/index.html" class="auth-brand">
+            <span class="brand-icon">+</span>
+            <span class="brand-text">
+                <strong>Minglanilla Emergency System</strong>
+                <small>Minglanilla, Cebu • 24/7 Rescue</small>
+            </span>
+        </a>
+        <span class="lgu-label">LGU</span>
+        <div class="header-content">
+            <h1>Welcome Back, Resident</h1>
+            <p>Enter your four-digit MPIN to access the emergency portal.</p>
+        </div>
+    </header>
+
+    <!-- ==================== LOGIN CONTENT ==================== -->
+    <main class="page-content">
+        <section class="login-card">
+            <div class="registered-heading">
+                <span>REGISTERED RESIDENT</span>
+                <button type="button" id="changeResident" class="text-button">Change</button>
+            </div>
+            
+            <div class="resident-summary">
+                <div class="resident-avatar" id="residentAvatar">JD</div>
+                <div class="resident-details">
+                    <strong id="residentName">Juan Dela Cruz</strong>
+                    <span id="residentAddress">Minglanilla, Cebu</span>
+                </div>
+                <span class="verified-mark">✓</span>
+            </div>
+            
+            <p class="pin-title">Enter your 4-digit MPIN</p>
+            
+            <div class="pin-display" aria-label="Four-digit MPIN">
+                <span class="pin-slot"></span>
+                <span class="pin-slot"></span>
+                <span class="pin-slot"></span>
+                <span class="pin-slot"></span>
+            </div>
+            
+            <p id="loginMessage" class="form-message" role="status" aria-live="polite"></p>
+            
+            <button type="button" id="loginButton" class="primary-button">Log In to Emergency Portal</button>
+            <button type="button" id="forgotPin" class="link-button">Forgot MPIN? Reset via SMS OTP</button>
+            
+            <div class="or-divider">
+                <span></span>
+                <p>or</p>
+                <span></span>
+            </div>
+            
+            <div class="alternate-actions">
+                <button type="button" id="biometricButton" class="secondary-button">◎ Biometrics</button>
+                <button type="button" id="otpButton" class="secondary-button">◉ SMS OTP</button>
+            </div>
+            
+            <p class="prototype-note">Prototype only. Authentication, SMS OTP, and biometric login are not connected.</p>
+        </section>
+
+        <!-- ==================== NUMERIC KEYPAD ==================== -->
+        <section class="keypad-card" aria-label="Numeric keypad">
+            <div class="keypad-row">
+                <button class="keypad-key" data-digit="1">1</button>
+                <button class="keypad-key" data-digit="2">2</button>
+                <button class="keypad-key" data-digit="3">3</button>
+            </div>
+            <div class="keypad-row">
+                <button class="keypad-key" data-digit="4">4</button>
+                <button class="keypad-key" data-digit="5">5</button>
+                <button class="keypad-key" data-digit="6">6</button>
+            </div>
+            <div class="keypad-row">
+                <button class="keypad-key" data-digit="7">7</button>
+                <button class="keypad-key" data-digit="8">8</button>
+                <button class="keypad-key" data-digit="9">9</button>
+            </div>
+            <div class="keypad-row keypad-bottom">
+                <span class="keypad-spacer"></span>
+                <button class="keypad-key" data-digit="0">0</button>
+                <button type="button" id="deleteDigit" class="keypad-key delete-key" aria-label="Delete last digit">⌫</button>
+            </div>
+        </section>
+
+        <!-- ==================== EMERGENCY ACCESS ==================== -->
+        <a href="../../Emergency/emergency-report.html" class="emergency-card">
+            <span class="emergency-icon">!</span>
+            <span class="emergency-text">
+                <strong>Extreme emergency? Send instant SOS</strong>
+                <small>No login needed to open the emergency report form.</small>
+            </span>
+            <span class="emergency-arrow">›</span>
+        </a>
+        <p class="prototype-note">Academic prototype only. Submitting the SOS form will not contact responders.</p>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>
